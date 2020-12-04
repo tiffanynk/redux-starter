@@ -2,6 +2,8 @@ import './App.css';
 import { Component } from 'react'
 import CharactersContainer from './components/CharactersContainer';
 import { connect } from 'react-redux';
+import {SET_CHARACTERS, ADD_CHARACTER} from './Redux/types';
+
 
 class App extends Component{
 
@@ -28,7 +30,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     //whatever props we want to create
-    setCharacters: (characters) => dispatch({type: 'SET_CHARACTERS', payload: characters}) 
+    setCharacters: (characters) => dispatch({type: SET_CHARACTERS, payload: characters}) 
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);
